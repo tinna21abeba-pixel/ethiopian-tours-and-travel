@@ -6,6 +6,9 @@ import Tours from './pages/Tours'
 import TourDetails from './pages/TourDetails'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
+import Booking from './pages/Booking'
+import About from './pages/About'
+import Destinations from './pages/Destinations'
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="/tours/:id" element={<TourDetails />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/destinations" element={<Destinations />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

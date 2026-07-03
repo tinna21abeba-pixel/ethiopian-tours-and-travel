@@ -54,4 +54,4 @@ frontend/src/assets
 
 # Backend dependencies
 Backend/node_modules/
-Backend/dist/
+Backend/dist/  

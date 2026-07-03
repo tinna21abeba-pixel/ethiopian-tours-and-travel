@@ -23,10 +23,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-md">
-                <span className={`${isSticky ? 'text-slate-900' : 'text-black'} font-bold`}>TZ</span>
-              </div>
-              <span className="font-semibold text-lg tracking-wide">Teddy Zion Tours</span>
+              <img src="/src/assets/images/logo.svg" alt="Land of Origins Tours logo" className="h-10 w-10 rounded-full object-cover shadow-md" />
+              <span className="font-semibold text-lg tracking-wide">Land of Origins Tours</span>
             </Link>
           </div>
 

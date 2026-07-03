@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import heroImg from '../../assets/images/heros/hero1.png'
+import videoFile from '../../assets/videos/mountainraise.mp4'
 
 export default function Hero() {
+  const [showVideo, setShowVideo] = useState(false)
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
@@ -37,7 +40,11 @@ export default function Hero() {
                 Explore Tours
               </Link>
 
-              <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-md">
+              <button
+                type="button"
+                onClick={() => setShowVideo(true)}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-md"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-5.197-3.03A1 1 0 008 9.03v5.94a1 1 0 001.555.832l5.197-3.03a1 1 0 000-1.664z" />
                 </svg>
@@ -66,6 +73,24 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {showVideo && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 px-4">
+          <div className="relative w-full max-w-4xl rounded-2xl bg-slate-950 p-3 shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setShowVideo(false)}
+              className="absolute right-3 top-3 z-10 rounded-full bg-white/10 px-3 py-1 text-sm text-white hover:bg-white/20"
+            >
+              Close
+            </button>
+            <video controls autoPlay className="w-full rounded-xl">
+              <source src={videoFile} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

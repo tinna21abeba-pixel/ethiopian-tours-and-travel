@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="grid gap-8 grid-cols-1 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center font-bold text-slate-900">TZ</div>
-              <span className="font-semibold text-lg">Teddy Zion Tours</span>
+              <img src="/src/assets/images/logo.svg" alt="Land of Origins Tours logo" className="h-10 w-10 rounded-full object-cover" />
+              <span className="font-semibold text-lg">Land of Origins Tours</span>
             </div>
             <p className="text-sm text-slate-300">Premium small-group and bespoke adventures across Ethiopia — responsible, expert-led and unforgettable.</p>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-slate-800 pt-6 text-sm text-slate-400 text-center">
-          © {new Date().getFullYear()} Teddy Zion Tours. All rights reserved.
+          © {new Date().getFullYear()} Land of Origins Tours. All rights reserved.
         </div>
       </div>
     </footer>
